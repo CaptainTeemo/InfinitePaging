@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF0903641DB35451008F9F2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0903631DB35451008F9F2F /* AppDelegate.swift */; };
+		CF0903661DB35451008F9F2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0903651DB35451008F9F2F /* ViewController.swift */; };
+		CF0903691DB35451008F9F2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0903671DB35451008F9F2F /* Main.storyboard */; };
+		CF09036B1DB35451008F9F2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF09036A1DB35451008F9F2F /* Assets.xcassets */; };
+		CF09036E1DB35451008F9F2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF09036C1DB35451008F9F2F /* LaunchScreen.storyboard */; };
+		CF0903791DB35451008F9F2F /* InfinitePagingDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0903781DB35451008F9F2F /* InfinitePagingDemoTests.swift */; };
+		CF0903841DB35451008F9F2F /* InfinitePagingDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0903831DB35451008F9F2F /* InfinitePagingDemoUITests.swift */; };
+		CF0903AA1DB39990008F9F2F /* banner1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF0903A61DB39990008F9F2F /* banner1.jpg */; };
+		CF0903AB1DB39990008F9F2F /* banner2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF0903A71DB39990008F9F2F /* banner2.jpg */; };
+		CF0903AC1DB39990008F9F2F /* banner3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF0903A81DB39990008F9F2F /* banner3.jpg */; };
+		CF0903AD1DB39990008F9F2F /* banner4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF0903A91DB39990008F9F2F /* banner4.jpg */; };
+		CF0903B91DB3B4FC008F9F2F /* InfinitePaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF0903B61DB3B4F6008F9F2F /* InfinitePaging.framework */; };
+		CF0903BA1DB3B4FC008F9F2F /* InfinitePaging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF0903B61DB3B4F6008F9F2F /* InfinitePaging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF0903751DB35451008F9F2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF0903581DB35451008F9F2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF09035F1DB35451008F9F2F;
+			remoteInfo = InfinitePagingDemo;
+		};
+		CF0903801DB35451008F9F2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF0903581DB35451008F9F2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF09035F1DB35451008F9F2F;
+			remoteInfo = InfinitePagingDemo;
+		};
+		CF0903B51DB3B4F6008F9F2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF0903B01DB3B4F6008F9F2F /* InfinitePaging.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CF09033D1DB3542C008F9F2F;
+			remoteInfo = InfinitePaging;
+		};
+		CF0903B71DB3B4F6008F9F2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF0903B01DB3B4F6008F9F2F /* InfinitePaging.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CF0903461DB3542C008F9F2F;
+			remoteInfo = InfinitePagingTests;
+		};
+		CF0903BB1DB3B4FC008F9F2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF0903B01DB3B4F6008F9F2F /* InfinitePaging.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CF09033C1DB3542C008F9F2F;
+			remoteInfo = InfinitePaging;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CF0903A51DB39221008F9F2F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CF0903BA1DB3B4FC008F9F2F /* InfinitePaging.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CF0903601DB35451008F9F2F /* InfinitePagingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfinitePagingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0903631DB35451008F9F2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF0903651DB35451008F9F2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF0903681DB35451008F9F2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF09036A1DB35451008F9F2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF09036D1DB35451008F9F2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF09036F1DB35451008F9F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF0903741DB35451008F9F2F /* InfinitePagingDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfinitePagingDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0903781DB35451008F9F2F /* InfinitePagingDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinitePagingDemoTests.swift; sourceTree = "<group>"; };
+		CF09037A1DB35451008F9F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF09037F1DB35451008F9F2F /* InfinitePagingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfinitePagingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0903831DB35451008F9F2F /* InfinitePagingDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinitePagingDemoUITests.swift; sourceTree = "<group>"; };
+		CF0903851DB35451008F9F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF0903A61DB39990008F9F2F /* banner1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner1.jpg; sourceTree = "<group>"; };
+		CF0903A71DB39990008F9F2F /* banner2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner2.jpg; sourceTree = "<group>"; };
+		CF0903A81DB39990008F9F2F /* banner3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner3.jpg; sourceTree = "<group>"; };
+		CF0903A91DB39990008F9F2F /* banner4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner4.jpg; sourceTree = "<group>"; };
+		CF0903B01DB3B4F6008F9F2F /* InfinitePaging.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InfinitePaging.xcodeproj; path = ../InfinitePaging.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF09035D1DB35451008F9F2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0903B91DB3B4FC008F9F2F /* InfinitePaging.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0903711DB35451008F9F2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF09037C1DB35451008F9F2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF0903571DB35451008F9F2F = {
+			isa = PBXGroup;
+			children = (
+				CF0903B01DB3B4F6008F9F2F /* InfinitePaging.xcodeproj */,
+				CF0903621DB35451008F9F2F /* InfinitePagingDemo */,
+				CF0903771DB35451008F9F2F /* InfinitePagingDemoTests */,
+				CF0903821DB35451008F9F2F /* InfinitePagingDemoUITests */,
+				CF0903611DB35451008F9F2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF0903611DB35451008F9F2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF0903601DB35451008F9F2F /* InfinitePagingDemo.app */,
+				CF0903741DB35451008F9F2F /* InfinitePagingDemoTests.xctest */,
+				CF09037F1DB35451008F9F2F /* InfinitePagingDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF0903621DB35451008F9F2F /* InfinitePagingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CF0903A61DB39990008F9F2F /* banner1.jpg */,
+				CF0903A71DB39990008F9F2F /* banner2.jpg */,
+				CF0903A81DB39990008F9F2F /* banner3.jpg */,
+				CF0903A91DB39990008F9F2F /* banner4.jpg */,
+				CF0903631DB35451008F9F2F /* AppDelegate.swift */,
+				CF0903651DB35451008F9F2F /* ViewController.swift */,
+				CF0903671DB35451008F9F2F /* Main.storyboard */,
+				CF09036A1DB35451008F9F2F /* Assets.xcassets */,
+				CF09036C1DB35451008F9F2F /* LaunchScreen.storyboard */,
+				CF09036F1DB35451008F9F2F /* Info.plist */,
+			);
+			path = InfinitePagingDemo;
+			sourceTree = "<group>";
+		};
+		CF0903771DB35451008F9F2F /* InfinitePagingDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF0903781DB35451008F9F2F /* InfinitePagingDemoTests.swift */,
+				CF09037A1DB35451008F9F2F /* Info.plist */,
+			);
+			path = InfinitePagingDemoTests;
+			sourceTree = "<group>";
+		};
+		CF0903821DB35451008F9F2F /* InfinitePagingDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF0903831DB35451008F9F2F /* InfinitePagingDemoUITests.swift */,
+				CF0903851DB35451008F9F2F /* Info.plist */,
+			);
+			path = InfinitePagingDemoUITests;
+			sourceTree = "<group>";
+		};
+		CF0903B11DB3B4F6008F9F2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF0903B61DB3B4F6008F9F2F /* InfinitePaging.framework */,
+				CF0903B81DB3B4F6008F9F2F /* InfinitePagingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF09035F1DB35451008F9F2F /* InfinitePagingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF0903881DB35451008F9F2F /* Build configuration list for PBXNativeTarget "InfinitePagingDemo" */;
+			buildPhases = (
+				CF09035C1DB35451008F9F2F /* Sources */,
+				CF09035D1DB35451008F9F2F /* Frameworks */,
+				CF09035E1DB35451008F9F2F /* Resources */,
+				CF0903A51DB39221008F9F2F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF0903BC1DB3B4FC008F9F2F /* PBXTargetDependency */,
+			);
+			name = InfinitePagingDemo;
+			productName = InfinitePagingDemo;
+			productReference = CF0903601DB35451008F9F2F /* InfinitePagingDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF0903731DB35451008F9F2F /* InfinitePagingDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF09038B1DB35451008F9F2F /* Build configuration list for PBXNativeTarget "InfinitePagingDemoTests" */;
+			buildPhases = (
+				CF0903701DB35451008F9F2F /* Sources */,
+				CF0903711DB35451008F9F2F /* Frameworks */,
+				CF0903721DB35451008F9F2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF0903761DB35451008F9F2F /* PBXTargetDependency */,
+			);
+			name = InfinitePagingDemoTests;
+			productName = InfinitePagingDemoTests;
+			productReference = CF0903741DB35451008F9F2F /* InfinitePagingDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF09037E1DB35451008F9F2F /* InfinitePagingDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF09038E1DB35451008F9F2F /* Build configuration list for PBXNativeTarget "InfinitePagingDemoUITests" */;
+			buildPhases = (
+				CF09037B1DB35451008F9F2F /* Sources */,
+				CF09037C1DB35451008F9F2F /* Frameworks */,
+				CF09037D1DB35451008F9F2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF0903811DB35451008F9F2F /* PBXTargetDependency */,
+			);
+			name = InfinitePagingDemoUITests;
+			productName = InfinitePagingDemoUITests;
+			productReference = CF09037F1DB35451008F9F2F /* InfinitePagingDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF0903581DB35451008F9F2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = CaptainTeemo;
+				TargetAttributes = {
+					CF09035F1DB35451008F9F2F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 6T7XGFHMKC;
+						ProvisioningStyle = Automatic;
+					};
+					CF0903731DB35451008F9F2F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 6T7XGFHMKC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CF09035F1DB35451008F9F2F;
+					};
+					CF09037E1DB35451008F9F2F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 6T7XGFHMKC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CF09035F1DB35451008F9F2F;
+					};
+				};
+			};
+			buildConfigurationList = CF09035B1DB35451008F9F2F /* Build configuration list for PBXProject "InfinitePagingDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF0903571DB35451008F9F2F;
+			productRefGroup = CF0903611DB35451008F9F2F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CF0903B11DB3B4F6008F9F2F /* Products */;
+					ProjectRef = CF0903B01DB3B4F6008F9F2F /* InfinitePaging.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				CF09035F1DB35451008F9F2F /* InfinitePagingDemo */,
+				CF0903731DB35451008F9F2F /* InfinitePagingDemoTests */,
+				CF09037E1DB35451008F9F2F /* InfinitePagingDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CF0903B61DB3B4F6008F9F2F /* InfinitePaging.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = InfinitePaging.framework;
+			remoteRef = CF0903B51DB3B4F6008F9F2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CF0903B81DB3B4F6008F9F2F /* InfinitePagingTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = InfinitePagingTests.xctest;
+			remoteRef = CF0903B71DB3B4F6008F9F2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF09035E1DB35451008F9F2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0903AB1DB39990008F9F2F /* banner2.jpg in Resources */,
+				CF0903AC1DB39990008F9F2F /* banner3.jpg in Resources */,
+				CF09036E1DB35451008F9F2F /* LaunchScreen.storyboard in Resources */,
+				CF0903AA1DB39990008F9F2F /* banner1.jpg in Resources */,
+				CF0903AD1DB39990008F9F2F /* banner4.jpg in Resources */,
+				CF09036B1DB35451008F9F2F /* Assets.xcassets in Resources */,
+				CF0903691DB35451008F9F2F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0903721DB35451008F9F2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF09037D1DB35451008F9F2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF09035C1DB35451008F9F2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0903661DB35451008F9F2F /* ViewController.swift in Sources */,
+				CF0903641DB35451008F9F2F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0903701DB35451008F9F2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0903791DB35451008F9F2F /* InfinitePagingDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF09037B1DB35451008F9F2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0903841DB35451008F9F2F /* InfinitePagingDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF0903761DB35451008F9F2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF09035F1DB35451008F9F2F /* InfinitePagingDemo */;
+			targetProxy = CF0903751DB35451008F9F2F /* PBXContainerItemProxy */;
+		};
+		CF0903811DB35451008F9F2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF09035F1DB35451008F9F2F /* InfinitePagingDemo */;
+			targetProxy = CF0903801DB35451008F9F2F /* PBXContainerItemProxy */;
+		};
+		CF0903BC1DB3B4FC008F9F2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = InfinitePaging;
+			targetProxy = CF0903BB1DB3B4FC008F9F2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF0903671DB35451008F9F2F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF0903681DB35451008F9F2F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF09036C1DB35451008F9F2F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF09036D1DB35451008F9F2F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF0903861DB35451008F9F2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF0903871DB35451008F9F2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF0903891DB35451008F9F2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6T7XGFHMKC;
+				INFOPLIST_FILE = InfinitePagingDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.captainteemo.InfinitePagingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CF09038A1DB35451008F9F2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6T7XGFHMKC;
+				INFOPLIST_FILE = InfinitePagingDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.captainteemo.InfinitePagingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CF09038C1DB35451008F9F2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6T7XGFHMKC;
+				INFOPLIST_FILE = InfinitePagingDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.captainteemo.InfinitePagingDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfinitePagingDemo.app/InfinitePagingDemo";
+			};
+			name = Debug;
+		};
+		CF09038D1DB35451008F9F2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6T7XGFHMKC;
+				INFOPLIST_FILE = InfinitePagingDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.captainteemo.InfinitePagingDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfinitePagingDemo.app/InfinitePagingDemo";
+			};
+			name = Release;
+		};
+		CF09038F1DB35451008F9F2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6T7XGFHMKC;
+				INFOPLIST_FILE = InfinitePagingDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.captainteemo.InfinitePagingDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = InfinitePagingDemo;
+			};
+			name = Debug;
+		};
+		CF0903901DB35451008F9F2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6T7XGFHMKC;
+				INFOPLIST_FILE = InfinitePagingDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.captainteemo.InfinitePagingDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = InfinitePagingDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF09035B1DB35451008F9F2F /* Build configuration list for PBXProject "InfinitePagingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0903861DB35451008F9F2F /* Debug */,
+				CF0903871DB35451008F9F2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF0903881DB35451008F9F2F /* Build configuration list for PBXNativeTarget "InfinitePagingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0903891DB35451008F9F2F /* Debug */,
+				CF09038A1DB35451008F9F2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF09038B1DB35451008F9F2F /* Build configuration list for PBXNativeTarget "InfinitePagingDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF09038C1DB35451008F9F2F /* Debug */,
+				CF09038D1DB35451008F9F2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF09038E1DB35451008F9F2F /* Build configuration list for PBXNativeTarget "InfinitePagingDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF09038F1DB35451008F9F2F /* Debug */,
+				CF0903901DB35451008F9F2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF0903581DB35451008F9F2F /* Project object */;
+}
