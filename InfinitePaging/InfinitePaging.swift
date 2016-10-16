@@ -130,7 +130,7 @@ extension InfinitePaging: UIScrollViewDelegate {
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let offsetX = scrollView.contentOffset.x
         let index = Int(offsetX / scrollView.frame.width)
-        guard let index < imageViews.count else { fatalError() }
+        guard index < imageViews.count else { fatalError() }
         currentIndex = imageViews[index].tag
         
         infinitePagingDelegate?.didScroll(at: currentIndex)
