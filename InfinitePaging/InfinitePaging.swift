@@ -14,125 +14,126 @@ public protocol InfinitePagingDataSource {
 }
 
 public protocol InfinitePagingDelegate {
-    func didTapImage(at index: Int)
+    func didSelect(at index: Int)
     func didScroll(at index: Int)
 }
 
-public class InfinitePaging: UIScrollView {
-    public var dataSource: InfinitePagingDataSource? {
-        didSet {
-            guard let ds = self.dataSource else { return }
-            let pages = ds.numberOfPages()
-            
-            imageViews.forEach{ $0.removeFromSuperview() }
-            imageViews.removeAll()
-            
-            for i in 0..<pages {
-                let imageView = UIImageView()
-                imageView.tag = i
-                imageView.contentMode = .scaleAspectFill
-                imageViews.append(imageView)
-                self.addSubview(imageView)
-                
-                let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-                imageView.addGestureRecognizer(tap)
-            }
-            
-            self.reloadData()
-        }
-    }
-    
-    public var infinitePagingDelegate: InfinitePagingDelegate?
-    
-    fileprivate var imageViews = [UIImageView]()
-    fileprivate var currentIndex = 0
-    fileprivate var pages: Int {
-        guard let ds = self.dataSource else { return 0 }
-        return ds.numberOfPages()
-    }
-    
-    fileprivate var timer: Timer?
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        commonInit()
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        commonInit()
-    }
-    
-    fileprivate func commonInit() {
-        isPagingEnabled = true
-        showsHorizontalScrollIndicator = false
-        
-        delegate = self
-    }
-    
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        for (index, imageView) in imageViews.enumerated() {
-            imageView.frame = CGRect(x: CGFloat(index) * frame.width, y: 0, width: frame.width, height: frame.height)
-        }
-        
-        contentSize = CGSize(width: frame.width * CGFloat(imageViews.count), height: frame.height)
-    }
-    
-    public func reloadData() {
-        for (index, imageView) in imageViews.enumerated() {
-            var i = index
-            if i >= pages {
-                i %= pages
-            }
-            self.dataSource?.image(at: i, closure: { (image) in
-                imageView.image = image
-            })
-        }
-    }
-    
-    @objc fileprivate func handleTap(sender: UITapGestureRecognizer) {
-        guard let imageView = sender.view else { return }
-        infinitePagingDelegate?.didTapImage(at: imageView.tag)
-    }
-    
-    fileprivate func fillHead() {
-        if let tail = imageViews.popLast() {
-            imageViews.insert(tail, at: 0)
-            setNeedsLayout()
-        }
-    }
-    
-    fileprivate func fillTail() {
-        let head = imageViews.removeFirst()
-        imageViews.append(head)
-        setNeedsLayout()
-    }
+public class InfinitePaging: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
+	public var items: [UIView] = [] {
+		didSet {
+			reloadData()
+		}
+	}
+	
+	public var loop: Bool = true
+	
+	public var infinitePagingDelegate: InfinitePagingDelegate?
+	
+	let layout = UICollectionViewFlowLayout()
+	public init(frame: CGRect) {
+		super.init(frame: frame, collectionViewLayout: layout)
+		
+		register(InfinitePagingCell.self, forCellWithReuseIdentifier: "\(InfinitePagingCell.self)")
+		dataSource = self
+		delegate = self
+		
+		showsHorizontalScrollIndicator = false
+		showsVerticalScrollIndicator = false
+		
+		isPagingEnabled = true
+		layout.minimumLineSpacing = 0
+		layout.minimumInteritemSpacing = 0
+		layout.scrollDirection = .horizontal
+		layout.itemSize = frame.size
+	}
+	
+	required init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+	
+	public override func layoutSubviews() {
+		super.layoutSubviews()
+		
+	}
+	
+	public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		if items.isEmpty {
+			return 0
+		}
+		if loop {
+			return Int(Int16.max)
+		}
+		return items.count
+	}
+	
+	public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		let index = indexPath.item
+		let mod = index % (items.count - 1)
+		let item = items[mod]
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(InfinitePagingCell.self)", for: indexPath) as! InfinitePagingCell
+		cell.content = item
+		return cell
+	}
+	
+	public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		infinitePagingDelegate?.didSelect(at: indexPath.item)
+	}
 }
 
-extension InfinitePaging: UIScrollViewDelegate {
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard pages > 1 else { return }
-        
-        let offsetX = scrollView.contentOffset.x
-        if offsetX < 0 {
-            fillHead()
-            scrollView.contentOffset = CGPoint(x: frame.width, y: 0)
-        } else if offsetX > contentSize.width - frame.width {
-            fillTail()
-            scrollView.contentOffset = CGPoint(x: contentSize.width - frame.width * 2, y: 0)
-        }
-    }
-    
-    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let offsetX = scrollView.contentOffset.x
-        let index = Int(offsetX / scrollView.frame.width)
-        guard index < imageViews.count else { fatalError() }
-        currentIndex = imageViews[index].tag
-        
-        infinitePagingDelegate?.didScroll(at: currentIndex)
-    }
+class InfinitePagingCell: UICollectionViewCell {
+	var content: UIView? {
+		didSet {
+			oldValue?.removeFromSuperview()
+			if let view = content {
+				view.clipsToBounds = true
+				contentView.addSubview(view)
+			}
+		}
+	}
+	
+	override func layoutSubviews() {
+		super.layoutSubviews()
+		
+		content?.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+	}
+}
+
+// original thoughts
+struct CircularLinkedList<T> {
+	var head: LinkedListNode<T>?
+	
+	let count: Int
+	let collection: [T]
+	init(collection: [T]) {
+		self.collection = collection
+		self.count = collection.count
+		
+		var data = collection
+		var currentNode: LinkedListNode<T>?
+		while !data.isEmpty {
+			let currentElement = data.removeFirst()
+			let newNode = LinkedListNode<T>(value: currentElement)
+			if head == nil {
+				head = newNode
+				currentNode = head
+			} else {
+				currentNode?.next = newNode
+				currentNode = currentNode?.next
+				currentNode?.previous = newNode
+			}
+		}
+		
+		currentNode?.next = head
+		head?.previous = currentNode
+	}
+}
+
+class LinkedListNode<T> {
+	var value: T?
+	var previous: LinkedListNode<T>?
+	var next: LinkedListNode<T>?
+	
+	init(value: T?) {
+		self.value = value
+	}
 }
