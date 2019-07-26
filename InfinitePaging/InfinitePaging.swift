@@ -8,11 +8,6 @@
 
 import UIKit
 
-public protocol InfinitePagingDataSource {
-    func numberOfPages() -> Int
-    func image(at index: Int, closure: (UIImage?) -> Void)
-}
-
 public protocol InfinitePagingDelegate {
     func didSelect(at index: Int)
     func didScroll(at index: Int)
